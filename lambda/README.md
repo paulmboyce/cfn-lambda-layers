@@ -1,6 +1,26 @@
 
 ## Package template and resources:
 
+
+### References:
+
+- [lambda layers](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-lambda-layerversion.html)
+- [Using AWS CloudFormation with layers](https://docs.aws.amazon.com/lambda/latest/dg/layers-cfn.html)
+- [Reference local files in CloudFormation template](https://catalog.workshops.aws/cfn101/en-US/intermediate/templates/package-and-deploy#reference-local-files-in-cloudformation-template) - this same idea is then extended to Lambda Layer
+- [Creating a .zip deployment package with dependencies](https://docs.aws.amazon.com/lambda/latest/dg/nodejs-package.html)
+
+IMPORTANT: Note how "Code" points to a folder, instead of S3 bucket. 
+The cloudformation package command will then replace with S3 paths.
+
+```
+Type: AWS::Lambda::Function
+  Properties:
+    ...
+    Code: lambda/ # <<< This is a local directory
+    ...
+```
+
+
 ### create layer (PROD deps only):
 
 NOTE: omit=dev is npm version specific, [see here](https://stackoverflow.com/questions/9268259/how-do-you-prevent-install-of-devdependencies-npm-modules-for-node-js-package)

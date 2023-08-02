@@ -31,7 +31,7 @@ Resources:
       Description: My Lambda Layer
       Content:
         S3Bucket: package-lambda-2023
-        S3Key: v0.0.1/1662b4b4835f5c792c1364f50424584c
+        S3Key: v0.0.1/09135be1c6f282d3acde618962755cff
       CompatibleRuntimes:
       - nodejs18.x
   MyLambdaFn:
@@ -47,7 +47,7 @@ Resources:
       Handler: app.lambdaHandler
       Code:
         S3Bucket: package-lambda-2023
-        S3Key: v0.0.1/a143c1b1146d52a862edf332f2adb303
+        S3Key: v0.0.1/1da5b48861ab26efae436db2345be7c6
       Timeout: 15
       MemorySize: 128
       Layers:

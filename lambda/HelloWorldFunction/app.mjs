@@ -13,7 +13,7 @@
 
 export const lambdaHandler = async (event, context) => {
     try {
-        console.log (">> v0.0.1 EVENT >>> ", event)
+        console.log (">> v0.0.1 EVENT using Layers >>> ", event)
         return {
             'statusCode': 200,
             'body': JSON.stringify({
